@@ -58,11 +58,14 @@
       <div class="card">
         <h2>Send me the guide</h2>
         <p class="small">Free. No spam, just the good stuff and the occasional nudge to finally book it.</p>
-        <form id="capture" method="POST" action="BREVO_FORM_ACTION" target="_self">
+        <form id="capture" method="POST" action="https://8463aa5f.sibforms.com/serve/MUIFAIne5EYJSul-Nzo3_xNN7ObTql3s7gHnvpxKrljRzfhSjC74t8oTHmGeBvtau6lwLp2jBW0uCn9eG5d-Akrq7oJ_ivdf64LDssnkmXdLBPbqpHCnsVbuO3VNQlE4sioBqP86HBa7rJv_DaMQeCvTOtYyZQVnbcyxOsX1fpTr27MFo5-biyIUZz0zf_yCl2rFwSVcRFNVXgs9-Q==" target="brevo_sink">
           <input type="email" name="EMAIL" placeholder="you@email.com" required autocomplete="email">
+          <input type="text" name="email_address_check" value="" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="locale" value="en">
           <button type="submit">Send me the guide &nbsp;&#128073;</button>
           <div class="fine">One tap from your someday having a date. &#128308;</div>
         </form>
+        <iframe name="brevo_sink" style="display:none" title="subscribe"></iframe>
       </div>
       <div class="inside">
         <h3>What's inside</h3>
@@ -103,9 +106,7 @@
 <script>
   var f=document.getElementById('capture');
   f.addEventListener('submit',function(e){
-    var action=f.getAttribute('action');
-    if(action==='BREVO_FORM_ACTION'){e.preventDefault();reveal();return;}
-    setTimeout(reveal,300);
+    setTimeout(reveal,350);
   });
   function reveal(){
     document.getElementById('capture-view').style.display='none';
