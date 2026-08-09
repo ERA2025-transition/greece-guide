@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TNDM0135S3"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TNDM0135S3');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Greece Starts Here — Travel Adventures by Eunice</title>
@@ -110,10 +113,11 @@
     setTimeout(reveal,350);
   });
   function reveal(){
+    if(window.gtag){gtag('event','generate_lead',{method:'greece_lp'});}
     document.getElementById('capture-view').style.display='none';
     document.getElementById('guide').style.display='block';
     window.scrollTo({top:0,behavior:'smooth'});
-  }
+    }
 </script>
 </body>
 </html>
